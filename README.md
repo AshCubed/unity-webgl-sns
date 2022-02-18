@@ -1,10 +1,10 @@
-# WebGL Snap and Share unity package
+# WebGL Save and Share unity package
 
 This package allows you to easily implement a snapshot or video save/share functionality into your WebGL applications. It includes the ability to save the result and, where available, the native Web Share API makes it possible to social share to other apps installed on the device.​
 
 ## Importing SNS package into Unity
 
-If you're using [Universal AR (UAR) Unity SDK](https://github.com/zappar-xr/universal-ar-unity) version 3.1.0 or above, you can directly add this package from Zappar menu option `Zappar > Additional Packages > Add\Update WebGL Save And Share`. Otherwise, you can import the package from the Unity editor by following these steps:
+If you're using [Universal AR (UAR) Unity SDK](https://github.com/zappar-xr/universal-ar-unity) version 3.1.0 or above, you can directly add this package from Zappar menu option `Zappar > Additional Packages > Add\Update WebGL Save And Share` (you may have to change focus of Editor Window or restart Unity after this if you see any error). Otherwise, you can import the package from the Unity editor by following these steps:
 1. Opening the `Package Manager` from `Window > Package Manager` from Editor
 2. Locate the `+` button on the top left corner and select `Add package from git URL...`
 3. Enter the following URL: `https://github.com/zappar-xr/unity-webgl-sns.git`
@@ -30,7 +30,7 @@ This library is currently supported only on Unity WebGL with the Unity version o
 
 ## Usage
 
-`ZSaveNShare.cs` is the main script that exposes all the required calls and callbacks you need to use the package. The typical flow of operation is as follows:
+`ZSaveNShare.cs` is the main script that exposes all the required APIs and callbacks you need to use the package. The typical flow of operation is as follows:
 1. Call the `ZSaveNShare.Initialize()` at the start of the scene. Normally you would call this from MonoBehaviours' `Awake` or `Start` method which will set up the library for use.
 2. Next you would want to subscribe for events from the native plugin. The `ZSaveNShare.RegisterSNSCallbacks(...)` allows you to register your callback methods for three main action prompts - `OnSaved`, `OnShared`, and `OnClosed`.
 3. Call `ZSaveNShare.DeregisterSNSCallbacks(...)` to unsubscribe for the plugin events at the end.
