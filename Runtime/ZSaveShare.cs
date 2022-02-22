@@ -77,7 +77,11 @@ namespace Zappar.Additional.SNS
 #endif
 
             {
+#if UNITY_EDITOR
+                Debug.Log("ZSaveShare is not supported in editor mode.");
+#else
                 Debug.Log("Failed to initialize save and share plugin!");
+#endif
                 return;
             }
         }
