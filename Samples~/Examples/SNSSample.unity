@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 670661529}
   - component: {fileID: 670661530}
   m_Layer: 0
-  m_Name: TestObj
+  m_Name: SaveNShareTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

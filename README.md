@@ -36,7 +36,7 @@ This library is currently supported only on Unity WebGL with the Unity version o
 3. Call `ZSaveNShare.DeregisterSNSCallbacks(...)` to unsubscribe for the plugin events at the end.
 4. Before calling to open the prompt you would need to set the data. Use `ZSaveNShare.TakeSnapshot(...)`, which is a C# coroutine to save the current unity frame. This internally calls `zappar_sns_jpg_snapshot` to set the data to be used with the prompt.
 5. `ZSaveNShare.OpenSNSSnapPrompt()` opens the prompt for the user to either save or share the media.
-6. Remember to update the webgl template or final index.html to define `uarGameInstance`. Read [Updates to WebGL Template](#updates-to-webgl-template) section for details.
+6. Remember to update your webgl template or final index.html to define `uarGameInstance`. Read [Updates to WebGL Template](#updates-to-webgl-template) section for details.
 
 The package includes an example scene to demonstrate the usage of the plugin. Look for the `ZSNSTest.cs` script to understand the flow.
 

@@ -3,6 +3,8 @@ using Zappar.Additional.SNS;
 
 public class ZSNSTest : MonoBehaviour
 {
+    [Range(0f,1f)]
+    public float encodeQuality = 0.75f;
 
     private void Start()
     {
@@ -12,7 +14,7 @@ public class ZSNSTest : MonoBehaviour
     public void TakeSnapshot()
     {
         ZSaveNShare.RegisterSNSCallbacks(OnSaved, OnShared, OnPromptClosed);
-        StartCoroutine(ZSaveNShare.TakeSnapshot(OnSnapshotCaptured));
+        StartCoroutine(ZSaveNShare.TakeSnapshot(OnSnapshotCaptured, encodeQuality));
     }
 
     public void OnSnapshotCaptured()
