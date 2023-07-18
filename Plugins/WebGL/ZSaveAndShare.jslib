@@ -14,9 +14,9 @@ mergeInto(LibraryManager.library, {
        window.unitySNSOnClosedFunc = UTF8ToString(onClosedFunc);
        if (typeof ZapparSharing === 'undefined' || ZapparSharing === null) {
             var scr = document.createElement("script");
-            scr.src="https://libs.zappar.com/zappar-sharing/1.1.3/zappar-sharing.min.js";
+            scr.src="https://libs.zappar.com/zappar-sharing/1.1.8/zappar-sharing.min.js";
             scr.addEventListener('load', function() {
-                console.log("Zappar-sharing version 1.1.3 added");
+                console.log("Zappar-sharing version 1.1.8 added");
                 window.snsInitialized = true;
             });
             document.body.appendChild(scr);
