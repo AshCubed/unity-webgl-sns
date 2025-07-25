@@ -14,7 +14,7 @@ mergeInto(LibraryManager.library, {
        window.unitySNSOnClosedFunc = UTF8ToString(onClosedFunc);
        if (typeof ZapparSharing === 'undefined' || ZapparSharing === null) {
             var scr = document.createElement("script");
-            scr.src="https://cdn.jsdelivr.net/gh/ashcubed/CarBrandGameShareJS/zappar-sharing-AshModified.js";
+            scr.src="https://cdn.jsdelivr.net/gh/ashcubed/CarBrandGameShareJS/zappar-sharing-AshModified.min.js";
             scr.addEventListener('load', function() {
                 console.log("Zappar-sharing version 1.1.8 added");
                 window.snsInitialized = true;
