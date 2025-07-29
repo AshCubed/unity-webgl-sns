@@ -53,6 +53,9 @@ mergeInto(LibraryManager.library, {
        if(typeof window.snsInitialized === 'undefined' || window.snsInitialized === false) return;
        ZapparSharing({
         data: window.snapUrl,
+        shareUrl: 'www.zappar.com',
+        shareTitle: 'Hello World!',
+        shareText: 'Hello World!',
         onSave: () => {
             window.uarGameInstance.SendMessage(window.unitySNSObjectListener, window.unitySNSOnSavedFunc);
         },
